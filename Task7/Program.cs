@@ -1,8 +1,5 @@
-﻿Console.Write("Введите первое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("Введите второе число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+﻿int num1 = InputNum("Введите первое число: ");
+int num2 = InputNum("Введите второе число: ");
 
 int remainder = num1 % num2;
 
@@ -13,4 +10,10 @@ if(remainder == 0)
 else
 {
     Console.Write($"Остаток от деления {num1} на {num2} = {remainder}");
+}
+
+int InputNum(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
